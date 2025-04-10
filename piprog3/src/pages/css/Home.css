@@ -1,0 +1,62 @@
+main {
+  padding: 0 40px;
+  /* Sangría horizontal */
+}
+
+h2 {
+  color: #5c6ac4;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+article {
+  width: 150px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+}
+
+article img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+article h3 {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #5c6ac4;
+}
+
+.verTodasLink {
+  display: block;
+  color: #4050b9;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(9, 31, 143, 0.5);
+  width: 20%;
+  margin: 20px auto;
+}
+
+.verTodasLink:hover {
+  text-decoration: underline;
+  color: black;
+}

@@ -1,0 +1,91 @@
+.character-card {
+    color: #444;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 180px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(92, 106, 196, 0.15); /* violeta suave */
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .character-card img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+  
+  .character-card:hover,
+  .active {
+    box-shadow: 0rem 0rem 10px 8px rgba(92, 106, 196, 0.25); /* hover violeta */
+  }
+  
+  .character-card p {
+    margin: 3px 0;
+  }
+  
+  .character-card h3 {
+    margin: 2px 0;
+  }
+  
+  .more {
+    color: #5c6ac4;
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  
+  .more:hover,
+  .delete:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .delete {
+    color: #ec505f;
+    text-align: center;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  
+  .detalle-link {
+    color: #5c6ac4;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .detalle-link:hover {
+    color: #a359ce;
+  }
+  
+  .favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .favoritos .character-card {
+    flex: 0 1 200px;
+    max-width: 100%;
+  }
+  
