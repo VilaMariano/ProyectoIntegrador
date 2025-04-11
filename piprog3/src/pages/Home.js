@@ -48,7 +48,7 @@ class Home extends Component {
 
 
                 <h2>Películas en Cartelera</h2>
-                <section>
+                  <section>
                     {this.state.cartelera.length === 0 ? (
                         <h3>Cargando películas en cartelera...</h3>
                     ) : (
