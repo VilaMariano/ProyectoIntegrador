@@ -1,0 +1,25 @@
+.NotFoundDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .NotFound {
+    font-size: 60px;
+    color:black;
+  }
+  
+  .NotFoundButton {
+    text-decoration: none;
+    padding:13px;
+    background-color: #5C6AC4;
+    color: white;
+    font-weight: bold;
+  }
+  
+ 
