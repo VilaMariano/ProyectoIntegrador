@@ -10,6 +10,7 @@ class Home extends Component {
         this.state = {
             populares: [],
             cartelera: [],
+            query: ""
         };
     }
 
@@ -29,9 +30,26 @@ class Home extends Component {
             .catch((error) => console.log(error));
     }
 
+    handleInput = (query) => {
+        this.setState({ query });
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.history.push("/busqueda", {query: this.state.query})
+    }
+
     render() {
         return (
             <main>
+                <form onSubmit={(e) => {this.handleSubmit(e)}}>
+                    <input type="text" placeholder="Buscar..." className="search-input" 
+                        onChange={(e) => this.handleInput(e.target.value)}
+                    />
+                    <button type="submit" className="search-button">
+                        Buscar
+                    </button>
+                </form>
                 <h2>Películas Populares</h2>
                 <section>
                     {this.state.populares.length === 0 ? (
@@ -59,7 +77,7 @@ class Home extends Component {
                             ))
                     )}
                 </section>
-                <Link to="/recomendadas" className="verTodasLink">Ver todas</Link>
+                <Link to="/cartelera" className="verTodasLink">Ver todas</Link>
 
             </main>
         );

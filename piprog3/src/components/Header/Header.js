@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
-            <Navbar />
+            <Navbar history={props.history} />
         </header>
     );
 };
