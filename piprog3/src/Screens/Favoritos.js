@@ -16,7 +16,7 @@ class Favoritos extends Component {
         let favoritos = JSON.parse(localStorage.getItem("favoritos"));
 
         if (!favoritos) {
-            favoritos = []; // Si no existe la losta, se crea aca
+            favoritos = []; // si no existe la losta, se crea aca
 
         }
 
@@ -28,7 +28,7 @@ class Favoritos extends Component {
                 .then((data) => {
                     this.setState({
                         favoritos: this.state.favoritos.concat(data),
-                    })  
+                    })
                 })
                 .catch((error) => console.log(error));
         });
@@ -41,17 +41,17 @@ class Favoritos extends Component {
             <main>
                 <h2>Favoritos</h2>
                 {
-                    this.state.cargando ? 
-                    <p>Cargando...</p> :
-                    (
-                        this.state.favoritos.length === 0 ? 
-                        <p>Todavía no hay favoritos</p> :
-                        <section>
-                            {this.state.favoritos.map((peli, i) => (
-                                <Card key={peli.id} pelicula={peli} />
-                            ))}
-                        </section>
-                    )
+                    this.state.cargando ?
+                        <p>Cargando...</p> :
+                        (
+                            this.state.favoritos.length === 0 ?
+                                <p>Todavía no hay favoritos</p> :
+                                <section>
+                                    {this.state.favoritos.map((peli, i) => (
+                                        <Card key={peli.id} pelicula={peli} />
+                                    ))}
+                                </section>
+                        )
                 }
             </main>
         );

@@ -14,8 +14,8 @@ class Navbar extends Component {
                 <div className="logo-container">
                     <img src="/img/logo.png" alt="Logo" className="logo" />
                     <Link to="/" className="logo-title-link">
-                    <h1 className="logo-title">WatchIt!</h1>
-                </Link>
+                        <h1 className="logo-title">WatchIt!</h1>
+                    </Link>
                 </div>
                 <ul className="nav-links">
                     <li><Link to="/">Home</Link></li>

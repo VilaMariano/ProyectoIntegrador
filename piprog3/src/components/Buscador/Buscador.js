@@ -12,7 +12,7 @@ class Buscador extends Component {
     };
 
     componentDidMount() {
-        
+
         const apiKey = "7e01cd2a906c0519c41c822af50c74d9";
 
         fetch(`https://api.themoviedb.org/3/search/movie?query=${this.props.query}&api_key=${apiKey}`)
@@ -29,18 +29,18 @@ class Buscador extends Component {
             <main>
                 <h2>Resultados de la búsqueda: {this.props.query}</h2>
                 {
-                    this.state.cargando ? 
-                    <p>Cargando...</p> :
-                    (
-                        this.state.peliculas.length === 0 ? 
-                        <p>No se encontraron resultados</p> :
-                        <section>
-                            <p>Se encontraron {this.state.peliculas.length} resultados</p>
-                            {this.state.peliculas.map((peli, i) => (
-                                <Card key={peli.id} pelicula={peli} />
-                            ))}
-                        </section>
-                    )
+                    this.state.cargando ?
+                        <p>Cargando...</p> :
+                        (
+                            this.state.peliculas.length === 0 ?
+                                <p>No se encontraron resultados</p> :
+                                <section>
+                                    <p>Se encontraron {this.state.peliculas.length} resultados</p>
+                                    {this.state.peliculas.map((peli, i) => (
+                                        <Card key={peli.id} pelicula={peli} />
+                                    ))}
+                                </section>
+                        )
                 }
             </main>
         );

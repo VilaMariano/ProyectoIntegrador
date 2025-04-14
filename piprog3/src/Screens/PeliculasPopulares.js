@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FiltroPeliculas from "../components/FiltroPeliculas/FiltroPeliculas";
+import Card from "../components/Card/Card";
 
 class PeliculasPopulares extends Component {
     constructor() {
@@ -53,11 +54,8 @@ class PeliculasPopulares extends Component {
                     <p>Cargando películas...</p>
                 ) : (
                     <section>
-                        {this.state.peliculas.map((peli, i) => (
-                            <article key={peli.id}>
-                                <h3>{peli.title}</h3>
-                                <img src={`https://image.tmdb.org/t/p/w200${peli.poster_path}`} alt={peli.title} />
-                            </article>
+                        {this.state.peliculas.map((peli) => (
+                            <Card key={peli.id} pelicula={peli} />
                         ))}
                     </section>
                 )}

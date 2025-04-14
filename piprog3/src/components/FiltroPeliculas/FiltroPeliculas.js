@@ -24,13 +24,12 @@ class FiltroPeliculas extends Component {
       <form onSubmit={(evento) => this.manejarSubmit(evento)}>
         <input
           type="text"
-          placeholder = "Buscar peliculas..."
+          placeholder="Buscar peliculas..."
           onChange={(evento) => this.controlarInput(evento)}
-          />
-        </form>
-      );
-    }
+        />
+      </form>
+    );
   }
-  
-  export default FiltroPeliculas;
-  
+}
+
+export default FiltroPeliculas;

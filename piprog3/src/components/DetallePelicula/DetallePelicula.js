@@ -14,7 +14,7 @@ class DetallePelicula extends Component {
 
     componentDidMount() {
         const apiKey = "7e01cd2a906c0519c41c822af50c74d9";
-        
+
         fetch(`https://api.themoviedb.org/3/movie/${this.props.id}?api_key=${apiKey}`)
             .then((response) => response.json())
             .then((data) => {
@@ -38,7 +38,7 @@ class DetallePelicula extends Component {
     };
 
     agregarAFavoritos() {
-        this.setState({ esFavorita : !this.state.esFavorita });
+        this.setState({ esFavorita: !this.state.esFavorita });
 
 
         // Traer la lista de favoritos del localStorage
@@ -67,23 +67,23 @@ class DetallePelicula extends Component {
             <main>
                 {
                     this.state.cargando ?
-                    <p>Cargando...</p> :
-                    <article>
-                        <img src={`https://image.tmdb.org/t/p/original${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title}/>
-                        <h1>{this.state.pelicula.title}</h1>
-                        <p>Calificación: {this.state.pelicula.rating}</p>
-                        <p>Fecha de estreno: {this.state.pelicula.release_date}</p>
-                        <p>Duración: {this.state.pelicula.runtime}</p>
-                        <p>{this.state.pelicula.overview}</p>
-                        <p>{this.state.pelicula.genres[0].name}</p>
-                        <button onClick={() => this.agregarAFavoritos()}>
-                            {
-                                this.state.esFavorita ?
-                                "Quitar de favoritos" :
-                                "Agregar a favoritos"
-                            }
-                        </button>
-                    </article>
+                        <p>Cargando...</p> :
+                        <article>
+                            <img src={`https://image.tmdb.org/t/p/original${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title} />
+                            <h1>{this.state.pelicula.title}</h1>
+                            <p>Calificación: {this.state.pelicula.rating}</p>
+                            <p>Fecha de estreno: {this.state.pelicula.release_date}</p>
+                            <p>Duración: {this.state.pelicula.runtime}</p>
+                            <p>{this.state.pelicula.overview}</p>
+                            <p>{this.state.pelicula.genres[0].name}</p>
+                            <button onClick={() => this.agregarAFavoritos()}>
+                                {
+                                    this.state.esFavorita ?
+                                        "Quitar de favoritos" :
+                                        "Agregar a favoritos"
+                                }
+                            </button>
+                        </article>
                 }
             </main>
         )

@@ -6,7 +6,7 @@ class ResultadosBusqueda extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            busqueda : this.props.location.state.query
+            busqueda: this.props.location.state.query
         };
     };
 
