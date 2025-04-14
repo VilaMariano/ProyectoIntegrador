@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../pages/css/Home.css";
+import "../Screens/css/Home.css";
 import Card from "../components/Card/Card";
 
 

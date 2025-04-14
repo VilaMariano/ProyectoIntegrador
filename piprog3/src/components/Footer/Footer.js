@@ -5,7 +5,7 @@ function Footer() {
     return (
       <footer className="footer">
         <p>Proyecto Integrador Programación III</p>
-        <p>Integrantes: Mariano Vila y Margarita Ziraldo</p>
+        <p>Mariano Vila y Margarita Ziraldo</p>
       </footer>
     );
   }

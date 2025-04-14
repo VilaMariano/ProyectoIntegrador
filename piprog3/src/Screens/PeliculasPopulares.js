@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FiltroPeliculas from "../components/FiltroPeliculas";
+import FiltroPeliculas from "../components/FiltroPeliculas/FiltroPeliculas";
 
 class PeliculasPopulares extends Component {
     constructor() {
