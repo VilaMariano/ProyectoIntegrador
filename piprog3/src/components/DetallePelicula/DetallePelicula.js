@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-// AGREGAR CSS
+import "./DetallePelicula.css";
 
 class DetallePelicula extends Component {
     constructor(props) {

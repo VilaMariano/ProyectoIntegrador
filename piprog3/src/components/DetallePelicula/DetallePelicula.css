@@ -1,0 +1,25 @@
+main {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+article {
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+}
+
+button {
+    background-color: #5c6ac4;
+    color: white;
+    font-size: 14px;
+    margin-top: 15px;
+}
